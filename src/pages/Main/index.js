@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import logo from '../../assets/logo.png';
 
@@ -6,17 +6,24 @@ import { Container, Form } from './styles';
 
 import CompareList from '../../components/CompareList';
 
-const Main = () => (
-  <Container>
-    <img src={logo} alt="GitHub Compare" />
+export default class Main extends Component {
+  state = {
+    repositories: [],
+  };
 
-    <Form>
-      <input type="text" placeholder="usuário/repositório" />
-      <button type="submit">Ok</button>
-    </Form>
+  render() {
+    const { repositories } = this.state;
+    return (
+      <Container>
+        <img src={logo} alt="GitHub Compare" />
 
-    <CompareList />
-  </Container>
-);
+        <Form>
+          <input type="text" placeholder="usuário/repositório" />
+          <button type="submit">Ok</button>
+        </Form>
 
-export default Main;
+        <CompareList repositories={repositories} />
+      </Container>
+    );
+  }
+}

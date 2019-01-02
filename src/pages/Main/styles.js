@@ -4,7 +4,6 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 60px;
 `;
 
 export const Form = styled.form`
@@ -30,6 +29,7 @@ export const Form = styled.form`
   }
 
   button {
+    width: 80px;
     height: 55px;
     padding: 0 20px;
     margin-left: 10px;

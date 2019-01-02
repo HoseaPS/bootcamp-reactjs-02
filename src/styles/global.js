@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
+import 'font-awesome/css/font-awesome.css';
+
 const GlobalStyle = createGlobalStyle`
   * {
     margin: 0;
@@ -12,6 +14,15 @@ const GlobalStyle = createGlobalStyle`
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
     font-family: sans-serif;
+
+    #root {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  html, body, #root {
+    height: 100%;
   }
 `;
 

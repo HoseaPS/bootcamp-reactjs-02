@@ -18,7 +18,7 @@ export const Form = styled.form`
     height: 55px;
     padding: 0 20px;
     background: #fff;
-    border: 1px solid #fff;
+    border: ${props => (props.withError ? '2px solid #f00' : '1px solid #fff')};
     font-size: 18px;
     color: #444;
     border-radius: 3px;

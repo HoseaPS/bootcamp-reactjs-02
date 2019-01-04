@@ -9,7 +9,7 @@ export const Container = styled.div`
 export const Form = styled.form`
   margin-top: 20px;
   width: 100%;
-  max-width: 400px;
+  max-width: 350px;
   display: flex;
 
   input {
